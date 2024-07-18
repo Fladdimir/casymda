@@ -5,21 +5,20 @@ Wouldn't it be _cool_ to combine the block-based process modeling experience of 
 
 And all that not only for free, but using the worlds most popular language for data analytics and machine learning?
 
-_Casymda_ enables you to create [SimPy3](https://simpy.readthedocs.io/en/latest/) simulation models, with help of BPMN and the battle-tested [Camunda-Modeler](<http://www.bpmn.io>).
+_Casymda_ enables you to create [SimPy](https://simpy.readthedocs.io/en/latest/) simulation models, with help of BPMN and the battle-tested [Camunda-Modeler](http://www.bpmn.io).
 
 Created BPMN process diagrams are parsed and converted to Python-code, combining visual oversight of model structure with code-based definition of model behavior.
 Immediately executable, including a token-based process animation, allowing for space-discrete entity movements, and ready to be wrapped as a gym-environment to let a machine-learning algorithm find a control strategy.
 
 Further information and sample projects:
 
-- <https://fladdimir.github.io/post/> (English)
-- <https://casymda.github.io/page/Webpage/Startpage.html> (German)
+- [https://fladdimir.github.io/](https://fladdimir.github.io/tags/simpy/)
 
 ## Installation
 
 From [PyPI](https://pypi.org/project/casymda/):
 
-``` l
+```l
 pip install casymda
 ```
 
@@ -29,11 +28,11 @@ pip install casymda
 - graphical model description via camunda modeler
 - process visualization browser-based or via tkinter
 - space-discrete tilemap-movements of entities
-- gradually typed (checkout [pyright](https://github.com/microsoft/pyright) for vscode)
+- gradually typed
 
 Coming soon:
 
-- automated model generation from process event-logs via [PM4Py](http://pm4py.org/)
+- automated model generation from process event-logs via [PM4Py](https://pypi.org/project/pm4py/)
 
 ## Examples
 
@@ -65,13 +64,13 @@ Tests can be carried out inside a docker-container, optionally including an inst
 
 sonarqube server (public docker image):
 
-``` l
+```l
 docker-compose up sonarqube
 ```
 
 sonar-scanner (public docker image):
 
-``` l
+```l
 docker-compose up analysis
 ```
 
@@ -80,13 +79,13 @@ docker-compose up analysis
 
 ### Tests
 
-``` l
+```l
 pytest --cov-report term --cov=src/casymda/ tests/
 ```
 
 integrations tests:
 
-``` l
+```l
 python3 -m pytest examples
 ```
 
@@ -94,7 +93,7 @@ python3 -m pytest examples
 
 For Docker-based tests see [docker-compose.yml](docker-compose.yml)
 
-``` l
+```l
 docker-compose run unit-test
 docker-compose run examples-test
 docker-compose run examples-test-pypi
@@ -102,19 +101,19 @@ docker-compose run examples-test-pypi
 
 ### Virtual environment setup
 
-``` l
+```l
 python3 -m venv venv
 ```
 
 ### Editable installation
 
-``` l
+```l
 pip install -e .
 ```
 
 ### Publish to pypi
 
-``` l
+```l
 python setup.py sdist
 
 twine upload dist/*
@@ -128,13 +127,3 @@ remember to set the version in [setup.py](setup.py) and [src/casymda](src/casymd
 Tested PyPy3 (7.3.1-final). Install pypy3 pypy3-dev pypy-tk.
 
 Runtime could be decreased by factor ~2 when using PyPy3 for longer simulations runs (e.g. from ~45s to ~25s for a [simple example model test](examples/basics/model/long_run_bpmn_example_test.py) with MAX_ENTITIES set to 40.000 on an i5 notebook).
-
-## Contact
-
-fladdi.mir@gmx.de
-
-feedback / ideas / discussion / cheering / complaints welcome
-
-MIT License
-
-2020
