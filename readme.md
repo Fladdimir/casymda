@@ -12,8 +12,7 @@ Immediately executable, including a token-based process animation, allowing for 
 
 Further information and sample projects:
 
-- <https://fladdimir.github.io/post/> (English)
-- <https://casymda.github.io/page/Webpage/Startpage.html> (German)
+- [https://fladdimir.github.io/](https://fladdimir.github.io/tags/simpy/)
 
 ## Installation
 
@@ -33,7 +32,7 @@ pip install casymda
 
 Coming soon:
 
-- automated model generation from process event-logs via [PM4Py](http://pm4py.org/)
+- automated model generation from process event-logs via [PM4Py](https://pypi.org/project/pm4py/)
 
 ## Examples
 
